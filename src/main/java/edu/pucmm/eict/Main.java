@@ -3,22 +3,19 @@ package edu.pucmm.eict;
 import io.javalin.Javalin;
 import io.javalin.http.staticfiles.Location;
 import io.javalin.rendering.JavalinRenderer;
-import io.javalin.rendering.template.JavalinFreemarker;
+import io.javalin.rendering.template.JavalinThymeleaf;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        JavalinRenderer.register(new JavalinFreemarker(), ".ftl");
-        var app = Javalin.create(javalinConfig -> {
-            javalinConfig.staticFiles.add(staticFileConfig -> {
-                staticFileConfig.hostedPath = "/";
-                staticFileConfig.directory = "/publico";
-                staticFileConfig.location = Location.CLASSPATH;
-            });
-        }).start(7006);
-
-        app.get("/", ctx -> {
-            ctx.render("templates/home.ftl");
+        JavalinRenderer.register(new JavalinThymeleaf(), ".html");
+        Javalin app = Javalin.create().start(4000);
+        app.cfg.staticFiles.add(staticFileConfig -> {
+            staticFileConfig.hostedPath = "/";
+            staticFileConfig.directory = "/public";
+            staticFileConfig.location = Location.CLASSPATH;
         });
+        app.get("/hello", ctx -> ctx.html("Hello World from Javalin!"));
+        app.get("/", ctx -> ctx.redirect("/home.html"));
+
     }
 }
