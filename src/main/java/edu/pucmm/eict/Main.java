@@ -11,11 +11,11 @@ public class Main {
         Javalin app = Javalin.create().start(4000);
         app.cfg.staticFiles.add(staticFileConfig -> {
             staticFileConfig.hostedPath = "/";
-            staticFileConfig.directory = "/templates";
+            staticFileConfig.directory = "/public";
             staticFileConfig.location = Location.CLASSPATH;
         });
         app.get("/hello", ctx -> ctx.html("Hello World from Javalin!"));
-        app.get("/", ctx -> ctx.redirect("/home.html"));
+        app.get("/", ctx -> ctx.redirect("/templates/home.html"));
 
     }
 }
