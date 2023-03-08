@@ -80,9 +80,35 @@
     font-size: 3rem;
 }
 
-.navbar {
-    box-shadow: 0 -10px 40px 0 rgba(0, 0, 0, 0.5);
-}
 .card {
-    box-shadow: 0 0 20px rgba(0,10,0,1);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
+.btn {
+    display: inline-block;
+    float: right;
+}
+
+
+/*nav {*/
+/*    background-image: url('https://www.pucmm.edu.do/noticias/PublishingImages/8-Open-House-10%20(1).jpg');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    height: 180px;*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    padding: 0 50px;*/
+/*}*/
+
+/*.navbar-right a {*/
+/*    color: white;*/
+/*    font-size: 24px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.navbar-middle h1 {*/
+/*    color: white;*/
+/*    font-size: 36px;*/
+/*    text-align: center;*/
+/*    margin: 0;*/
+/*}*/
