@@ -24,6 +24,7 @@ dependencies {
     implementation 'com.h2database:h2:2.1.212'
     //JDBC
     implementation 'org.postgresql:postgresql:42.2.1'
+    implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
 }
 
 test {
