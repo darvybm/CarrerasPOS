@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/carreraStyle.css">
 
+    <!-- CSS files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- JavaScript files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </head>
 <body style="background-color: #181818">
@@ -18,17 +24,18 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
+
     <div class="bg-image text-center"
          style="background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('https://static.vecteezy.com/system/resources/thumbnails/002/317/784/small/luxury-black-and-gold-background-free-vector.jpg');
          box-shadow: 10px 10px 50px rgb(0,0,0);">
         <div class="py-4">
             <h1 class="display-2 fw-bold text-warning">I<span style="color:white;">CC</span></h1>
+<!--                <div class="col-lg-6 mx-auto">-->
+                    <p class="fs-5 mb-4 text-white">Elige la carrera que deseas y guardala contigo</p>
+<!--                </div>-->
             <a href="/templates/home.html">
                 <button class="btn p-1" type="button" style="background-color: #e7a801; font-size: 20px; font-weight: bold; color: black; border-radius: 30px; font-family: 'Montserrat', sans-serif">&nbsp&nbsp&nbspRegresar&nbsp&nbsp&nbsp</button>
             </a>
-                <div class="col-lg-6 mx-auto">
-                <p class="fs-5 mb-4 text-white">Elige la carrera que deseas y guardala contigo</p>
-            </div>
         </div>
     </div>
 
@@ -37,222 +44,279 @@
         <h1 class="fw-bold text-warning" style="margin-bottom: 20px">> <span style="color:#DCDCDC;">Carreras</span></h1>
         <div class="row row-cols-2 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaCienciasComputacion" style="background-color: #202020">
                     <img src="https://images2.content-hci.com/commimg/myhotcourses/blog/post/myhc_89683.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea en Ciencias de la Computaci&oacuten</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria en Ciencias de la Computacion">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaTelematica" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/ingenierias/SFS%20Carousel%20Content/Fotolia_47933221_Subscription_Monthly_M2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea Telem&aacutetica</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Telematica">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaMecatronica" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/ingenierias/PublishingImages/mecatronica.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea Mecatr&oacutenica</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Mecatronica">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaElectrica" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/ingenierias/PublishingImages/electrica-.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea El&eacutectrica</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Electrica">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaCivil" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/ingenierias/SFS%20Carousel%20Content/Civil-%282%29.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea Civil</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Civil">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaIndustrial" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/ingenierias/SFS%20Carousel%20Content/Ingenieria.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea Industrial y de Sistemas</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Industrial y de Sistemas">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaMecanica" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/ingenierias/SFS%20Carousel%20Content/b.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea Mec&aacutenica</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Mecanica">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="IngenieriaAmbiental" style="background-color: #202020">
                     <img src="https://pucmm.edu.do/graduacion/PublishingImages/ingenieria-ambiental.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ingenier&iacutea Ambiental</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ingenieria Ambiental">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="DireccionEmpresarial" style="background-color: #202020">
                     <img src="https://alexsamboy.github.io/landing-fcea/img/negocios-internacionales.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Direcci&oacuten Empresarial</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Direccion Empresarial">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="AdministracionHotelera" style="background-color: #202020">
                     <img src="https://alexsamboy.github.io/landing-fcea/img/ht/adh.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Administraci&oacuten Hotelera</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Administracion Hotelera">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Economia" style="background-color: #202020">
                     <img src="https://alexsamboy.github.io/landing-fcea/img/econ/banner-economia.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Econom&iacutea</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Economia">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="GestionFinanciera" style="background-color: #202020">
                     <img src="https://www.ceupe.com/images/easyblog_articles/2488/gestin-financiera.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Gesti&oacuten Financiera y Auditor&iacutea</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Gestion Financiera y Auditoria">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Marketing" style="background-color: #202020">
                     <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2021/08/the-ultimate-guide-to-digital-marketing-61726311bf393-sej.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Marketing</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Marketing">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="ComunicacionSocial" style="background-color: #202020">
                     <img src="https://humanidades.pucmm.edu.do/comunicacion/PublishingImages/IMG002A-6.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Comunicaci&oacuten Social</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Comunicacion Social">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Arquitectura" style="background-color: #202020">
                     <img src="https://www.pucmm.edu.do/humanidades/SFS%20Carousel%20Content/Arquitectura.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Arquitectura</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Arquitectura">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="DisenoInteriorismo" style="background-color: #202020">
                     <img src="https://www.pucmm.edu.do/humanidades/PublishingImages/din.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Dise&ntildeo e Interiorismo</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Diseno e Interiorismo">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Derecho" style="background-color: #202020">
                     <img src="https://www.emagister.com/blog/wp-content/uploads/2015/05/GettyImages-480386050-1917x1280.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Derecho</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Derecho">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Eduacion" style="background-color: #202020">
                     <img src="https://s3.amazonaws.com/cdn.conectate-new.com/wp-content/uploads/2017/01/11000039/Educacion.jpg  " class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Eduaci&oacuten</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Eduacion">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Psicologia" style="background-color: #202020">
                     <img src="https://psicologia.pucmm.edu.do/wp-content/uploads/2022/04/psi-clinica.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Psicolog&iacutea</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Psicologia">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Ecologia" style="background-color: #202020">
                     <img src="https://www.pucmm.edu.do/humanidades/SFS%20Carousel%20Content/Ecolog%C3%ADa.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ecolog&iacutea</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ecologia">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="Filosofia" style="background-color: #202020">
                     <img src="https://www.pucmm.edu.do/humanidades/PublishingImages/filosofia.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Filosof&iacutea</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Filosofia">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="CienciasSociales" style="background-color: #202020">
                     <img src="https://humanidades.pucmm.edu.do/espanol/PublishingImages/escuela.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Ciencias Sociales</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Ciencias Sociales">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="TrabajoSocial" style="background-color: #202020">
                     <img src="https://www.pucmm.edu.do/humanidades/PublishingImages/trabajo-soc.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Trabajo Social</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Trabajo Social">Seleccionar</a>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card", style="background-color: #202020">
+                <div class="card" id="LenguasModernas" style="background-color: #202020">
                     <img src="https://i1.wp.com/www.revistac2.com/graduari/wp-content/uploads/2017/08/Lenguas_Modernas_2.jpg?fit=747%2C717" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Lenguas Modernas</h5>
-                        <a class="btn" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px">Seleccionar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="formCarrera" tabindex="-1" aria-labelledby="formCarreraModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabel">Ingresa tus Datos</h2>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="myform bg-dark">
+<!--                                <h1 class="text-center">Login Form</h1>-->
+                                <form style="padding-top: 0; padding-bottom: 50px" autocomplete="off" method="post" action="/registrarCarrera">
+                                    <div class="mb-3 mt-4">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="edad" class="form-label">Edad</label>
+                                        <input type="number" class="form-control" id="edad" min="1" max="99" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="provincia" class="form-label">Provincia</label>
+                                        <select class="form-select" id="provincia">
+                                            <option value="" disabled selected>Selecciona tu provincia</option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">Sexo</div>
+                                    <div class="mb-3 form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="btnMasculino" value="Masculino" checked>
+                                        <label class="form-check-label" for="btnMasculino">Masculino</label>
+                                    </div>
+                                    <div class="mb-3 form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="btnFemenino" value="Femenino">
+                                        <label class="form-check-label" for="btnFemenino">Femenino</label>
+                                    </div>
+                                    <input type="hidden" name="carrera" th:value="${param.courseId}">
+                                    <button type="submit" class="btn btn-light mt-3 rounded-pill" style="font-family: 'Montserrat', sans-serif">Registrar</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<script th:inline="javascript">
+    $('#formCarrera').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var courseId = button.data('carrera');
+        $(this).find('input[name="carrera"]').val(courseId);
+    })
+</script>
+
 </body>
 </html>
