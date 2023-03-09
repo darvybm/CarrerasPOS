@@ -201,7 +201,7 @@
                     <img src="https://s3.amazonaws.com/cdn.conectate-new.com/wp-content/uploads/2017/01/11000039/Educacion.jpg  " class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title" style="color: #DCDCDC">Eduaci&oacuten</h5>
-                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Eduacion">Seleccionar</a>
+                        <a class="btn" data-bs-toggle="modal" data-bs-target="#formCarrera" style="color: white; background-color: #e7a801; margin-top: 8px; width: 100%; padding: 5px" data-carrera="Educacion">Seleccionar</a>
                     </div>
                 </div>
             </div>
@@ -273,30 +273,57 @@
                                 <form style="padding-top: 0; padding-bottom: 50px" autocomplete="off" method="post" action="/registrarCarrera">
                                     <div class="mb-3 mt-4">
                                         <label for="nombre" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="nombre" required>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="edad" class="form-label">Edad</label>
-                                        <input type="number" class="form-control" id="edad" min="1" max="99" required>
+                                        <input type="number" class="form-control" name="edad" id="edad" min="1" max="99" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="provincia" class="form-label">Provincia</label>
-                                        <select class="form-select" id="provincia">
-                                            <option value="" disabled selected>-- Selecciona tu provincia --</option>
-                                            <option value="1">Option 1</option>
-                                            <option value="2">Option 2</option>
-                                            <option value="3">Option 3</option>
-                                            <option value="4">Option 4</option>
-                                            <option value="5">Option 5</option>
+                                        <select class="form-select" id="provincia" name="provincia">
+                                            <option value="" disabled selected>Selecciona tu provincia</option>
+                                            <option value="Azua">Azua</option>
+                                            <option value="Bahoruco">Bahoruco</option>
+                                            <option value="Barahona">Barahona</option>
+                                            <option value="Dajabon">Dajabon</option>
+                                            <option value="Distrito Nacional">Distrito Nacional</option>
+                                            <option value="Duarte">Duarte</option>
+                                            <option value="El Seibo">El Seibo</option>
+                                            <option value="Elias Pina">Elias Pina</option>
+                                            <option value="Espaillat">Espaillat</option>
+                                            <option value="Hato Mayor">Hato Mayor</option>
+                                            <option value="Hermanas Mirabal">Hermanas Mirabal</option>
+                                            <option value="Independencia">Independencia</option>
+                                            <option value="La Altagracia">La Altagracia</option>
+                                            <option value="La Romana">La Romana</option>
+                                            <option value="La vega">La vega</option>
+                                            <option value="Maria Trinidad Sanchez">Maria Trinidad Sanchez</option>
+                                            <option value="Monsenor Nouel">Monsenor Nouel</option>
+                                            <option value="Monteplata">Monteplata</option>
+                                            <option value="Montecristi">Montecristi</option>
+                                            <option value="Pedernales">Pedernales</option>
+                                            <option value="Peravia">Peravia</option>
+                                            <option value="Puerto Plata">Puerto Plata</option>
+                                            <option value="Samana">Samana</option>
+                                            <option value="San Cristobal">San Cristobal</option>
+                                            <option value="San Jose de Ocoa">San Jose de Ocoa</option>
+                                            <option value="San Juan">San Juan</option>
+                                            <option value="San Pedro De Macoris">San Pedro De Macoris</option>
+                                            <option value="Sanchez Ramirez">Sanchez Ramirez</option>
+                                            <option value="Santiago">Santiago</option>
+                                            <option value="Santiago Rodriguez">Santiago Rodriguez</option>
+                                            <option value="Santo Domingo">Santo Domingo</option>
+                                            <option value="Valverde">Valverde</option>
                                         </select>
                                     </div>
                                     <div class="mb-3">Sexo</div>
                                     <div class="mb-3 form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="btnMasculino" value="Masculino" checked>
+                                        <input class="form-check-input" type="radio" name="sexo" id="btnMasculino" value="Masculino" checked>
                                         <label class="form-check-label" for="btnMasculino">Masculino</label>
                                     </div>
                                     <div class="mb-3 form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="btnFemenino" value="Femenino">
+                                        <input class="form-check-input" type="radio" name="sexo" id="btnFemenino" value="Femenino">
                                         <label class="form-check-label" for="btnFemenino">Femenino</label>
                                     </div>
                                     <input type="hidden" name="carrera" th:value="${param.courseId}">

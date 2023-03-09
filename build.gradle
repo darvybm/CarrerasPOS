@@ -28,6 +28,10 @@ dependencies {
     //JDBC
     implementation 'org.postgresql:postgresql:42.2.1'
     implementation 'org.thymeleaf:thymeleaf:3.1.1.RELEASE'
+
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.14.0")
+    implementation 'org.json:json:20210307'
+    implementation("org.apache.httpcomponents:httpclient:4.5.13")
 }
 
 test {
