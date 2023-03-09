@@ -5,7 +5,15 @@ import io.javalin.http.staticfiles.Location;
 import io.javalin.rendering.JavalinRenderer;
 import io.javalin.rendering.template.JavalinThymeleaf;
 
+import java.awt.*;
+import java.awt.print.*;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -45,14 +53,15 @@ public class Main {
            int edad = ctx.formParamAsClass("edad", Integer.class).get();
 
             Estudiante estudiante = new Estudiante(nombre,sexo,edad,provincia,carrera);
+//            estudiante.setCarrera("NULL TODAVIA");
+
             JSONObject json = new JSONObject();
             json.put("id", estudiante.getId());
             json.put("nombre", estudiante.getNombre());
             json.put("edad", estudiante.getEdad());
             json.put("sexo", estudiante.getSexo());
             json.put("provincia", estudiante.getProvincia());
-//            json.put("carrera", estudiante.getCarrera());
-            json.put("carrera", "prueba (NULL)");
+            json.put("carrera", estudiante.getCarrera());
 
             JSONArray jsonArray = new JSONArray();
             jsonArray.put(json);
@@ -61,10 +70,34 @@ public class Main {
 
             enviarPowerBI(jsonString, url);
             estudiantes.add(estudiante);
+
+            // Imprimir la factura en una impresora
+            PrinterJob printerJob = PrinterJob.getPrinterJob();
+            Printable printable = new StringPrintable(estudiante.generarBoleto());
+            printerJob.setPrintable(printable);
+
+            try {
+                printerJob.print();
+                System.out.println("Imprimió");
+            } catch (PrinterException e) {
+                e.printStackTrace();
+            }
+
+            try (PrintWriter writer = new PrintWriter(new File("imprimir.txt"))) {
+                // Escribir el string formateado en el archivo
+                writer.write(estudiante.generarBoleto());
+
+            } catch (FileNotFoundException e) {
+                System.out.println("El archivo no se pudo crear.");
+                e.printStackTrace();
+            }
+
             ctx.redirect("/");
         });
 
     }
+
+
 
     private static void enviarPowerBI(String json, String urlPoweBi) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -86,6 +119,21 @@ public class Main {
         } finally {
             httpClient.close();
         }
+    }
 
+    private static class StringPrintable implements Printable {
+        private String string;
+        public StringPrintable(String string) {
+            this.string = string;
+        }
+        @Override
+        public int print(Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException {
+            if (pageIndex > 0) {
+                return Printable.NO_SUCH_PAGE;
+            }
+
+            graphics.drawString(string, 100, 100);
+            return Printable.PAGE_EXISTS;
+        }
     }
 }

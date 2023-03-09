@@ -68,4 +68,19 @@ public class Estudiante {
     public void setCarrera(String carrera) {
         this.carrera = carrera;
     }
+
+    public String generarBoleto() {
+        String boleto = String.format(
+                        "         OPEN HOUSE 2023         \n" +
+                        "---------------ICC---------------\n" +
+                        "ID:      %d                      \n" +
+                        "Nombre:  %s                      \n" +
+                        "Edad:    %d                      \n" +
+                        "Sexo:    %s                      \n" +
+                        "Carrera: %s                      \n" +
+                        "---------------ICC---------------\n",
+                        id, nombre, edad,sexo,carrera);
+
+        return boleto;
+    }
 }
