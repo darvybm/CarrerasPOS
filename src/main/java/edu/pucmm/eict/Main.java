@@ -33,7 +33,7 @@ import org.apache.http.impl.client.HttpClients;
 
 public class Main {
     public static void main(String[] args) {
-        String url = "https://api.powerbi.com/beta/4017af08-a2e1-4daa-9180-5b3bc8ee84fa/datasets/c04cf1c6-7e64-4a30-8856-bcd7a31ae80c/rows?language=en-us&disableBranding=1&authComplete=true&key=Ttp74qaF3h6a9vlAj4qigN0nFqTLQhK4wX7YGGTb0ClLHyEPCiRdAjxk%2BrsMUge4brC%2F0xygqsdIP%2FN7uDig1w%3D%3D";
+        String url = "https://api.powerbi.com/beta/4017af08-a2e1-4daa-9180-5b3bc8ee84fa/datasets/28bceea4-a60d-40f1-82a0-c6d33e39ce2d/rows?key=VApMq2xPkwBg1BEu47YGKDajLwza9gm%2FpvM70q46sNsvEPlb22G%2F0aVorP4BNZmwBS3mB%2BMkbMukR1pJN2GyFg%3D%3D";
         List<Estudiante> estudiantes = new ArrayList<>();
 
         JavalinRenderer.register(new JavalinThymeleaf(), ".html");
