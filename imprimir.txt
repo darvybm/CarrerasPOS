@@ -1,8 +1,8 @@
          OPEN HOUSE 2023         
 ---------------ICC---------------
 ID:      1                      
-Nombre:  el mejor                      
-Edad:    33                      
-Sexo:    Masculino                      
-Carrera: Lenguas Modernas                      
+Nombre:  Nicole Fernandez                      
+Edad:    21                      
+Sexo:    Femenino                      
+Carrera: Arquitectura                      
 ---------------ICC---------------
