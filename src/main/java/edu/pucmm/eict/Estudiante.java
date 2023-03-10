@@ -1,7 +1,7 @@
 package edu.pucmm.eict;
 
 public class Estudiante {
-    public static int idEstudiante = 1;
+    public static int idEstudiante = 188;
     private int id;
     private String nombre;
     private String sexo;
