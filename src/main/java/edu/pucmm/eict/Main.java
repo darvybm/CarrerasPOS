@@ -37,7 +37,7 @@ public class Main {
         List<Estudiante> estudiantes = new ArrayList<>();
 
         JavalinRenderer.register(new JavalinThymeleaf(), ".html");
-        Javalin app = Javalin.create().start(4000);
+        Javalin app = Javalin.create().start(9000);
         app.cfg.staticFiles.add(staticFileConfig -> {
             staticFileConfig.hostedPath = "/";
             staticFileConfig.directory = "/public";

@@ -1,0 +1,163 @@
+.card h2 {
+    font-weight: 900;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.container-maxW {
+    max-width: 1200px
+}
+
+.card-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.card h5 {
+    height: 65px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06)
+}
+
+.label-top {
+    position: absolute;
+    background-color: #8bc34a;
+    color: #fff;
+    top: 8px;
+    right: 8px;
+    padding: 5px 10px 5px 10px;
+    font-size: .7rem;
+    font-weight: 600;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+.top-right {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 900;
+    background: #ff5722;
+    line-height: 90px;
+    text-align: center;
+    color: white
+}
+
+.top-right span {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.card btn {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 50px 5px 50px
+}
+
+.price-hp {
+    font-weight: 600;
+    color: seagreen;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 3rem;
+}
+
+.card {
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+.btn {
+    display: inline-block;
+    float: right;
+}
+
+.modal-content {
+    width: 80%;
+    margin: 0 auto;
+}
+.modal-header {
+    background-color: #e5a702;
+    color: #ffffff;
+    padding: 1em;
+}
+.modal-body {
+    padding: 0;
+}
+.btn-close {
+    position: relative;
+    right: 0;
+    padding: 1em;
+}
+h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+}
+.myform {
+    padding: 2em;
+    padding-top: 0.5px;
+    max-width: 100%;
+    color: #fff;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+}
+@media (max-width: 576px) {
+    .myform {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+.form-control:focus {
+    box-shadow: inset 0 -1px 0 #7e7e7e;
+}
+.form-control {
+    background-color: inherit;
+    color: #fff;
+    padding-left: 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+}
+.myform .btn {
+    width: 100%;
+    font-weight: 800;
+    background-color: #fff;
+    border-radius: 0;
+    padding: 0.5em 0;
+}
+.myform .btn:hover {
+    background-color: inherit;
+    color: #fff;
+    border-color: #fff;
+}
+p {
+    text-align: center;
+    padding-top: 2em;
+    color: grey;
+}
+p a {
+    color: #e1e1e1;
+    text-decoration: none;
+}
+p a:hover {
+    color: #fff;
+}
+.custom-radio-color input:checked + .form-check-label:before {
+    border-color: #28a745;
+    background-color: #28a745;
+}
