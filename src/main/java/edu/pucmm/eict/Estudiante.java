@@ -1,7 +1,7 @@
 package edu.pucmm.eict;
 
 public class Estudiante {
-    public static int idEstudiante = 1;
+    public static int idEstudiante = 188;
     private int id;
     private String nombre;
     private String sexo;
@@ -71,14 +71,15 @@ public class Estudiante {
 
     public String generarBoleto() {
         String boleto = String.format(
-                        "         OPEN HOUSE 2023         \n" +
-                        "---------------ICC---------------\n" +
-                        "ID:      %d                      \n" +
-                        "Nombre:  %s                      \n" +
-                        "Edad:    %d                      \n" +
-                        "Sexo:    %s                      \n" +
-                        "Carrera: %s                      \n" +
-                        "---------------ICC---------------\n",
+                        "         OPEN HOUSE 2023           \n\n" +
+                        "---------------ICC-----------------\n\n" +
+                        "ID:      %d                        \n\n" +
+                        "Nombre:  %s                        \n\n" +
+                        "Edad:    %d                        \n\n" +
+                        "Sexo:    %s                        \n\n" +
+                        "Carrera: %s                        \n\n" +
+                        "---------------ICC-----------------\n\n" +
+                        "\n\n\n\n\n\n",
                         id, nombre, edad,sexo,carrera);
 
         return boleto;
